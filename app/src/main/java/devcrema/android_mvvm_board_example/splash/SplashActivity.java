@@ -1,9 +1,12 @@
 package devcrema.android_mvvm_board_example.splash;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import devcrema.android_mvvm_board_example.login.LoginActivity;
 
 public class SplashActivity extends AppCompatActivity implements SplashNavigator {
 
@@ -19,7 +22,9 @@ public class SplashActivity extends AppCompatActivity implements SplashNavigator
 
     @Override
     public void openLogin() {
-        //TODO 로그인 화면 이동
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+        finish();
     }
 
     @Override

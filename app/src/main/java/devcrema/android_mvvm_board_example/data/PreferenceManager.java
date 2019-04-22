@@ -5,7 +5,7 @@ import android.content.SharedPreferences;
 
 import org.apache.commons.lang3.StringUtils;
 
-import devcrema.android_mvvm_board_example.BaseApplication;
+import devcrema.android_mvvm_board_example.BoardApplication;
 
 public class PreferenceManager {
 
@@ -20,7 +20,7 @@ public class PreferenceManager {
     }
 
     private PreferenceManager() {
-        sharedPreferences = BaseApplication.getContext().getSharedPreferences(PREFERENCE_NAME, Context.MODE_PRIVATE);
+        sharedPreferences = BoardApplication.getContext().getSharedPreferences(PREFERENCE_NAME, Context.MODE_PRIVATE);
     }
 
     public static PreferenceManager getInstance(){
